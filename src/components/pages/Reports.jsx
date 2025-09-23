@@ -9,7 +9,7 @@ import ApperIcon from "@/components/ApperIcon";
 import Loading from "@/components/ui/Loading";
 import Error from "@/components/ui/Error";
 import Empty from "@/components/ui/Empty";
-import toast from "react-hot-toast";
+import { toast } from 'react-toastify';
 
 const Reports = () => {
   const [transactions, setTransactions] = useState([]);
@@ -322,11 +322,11 @@ const Reports = () => {
             <p className="text-sm text-slate-600">Download your financial data for external analysis</p>
           </div>
           <div className="flex space-x-3">
-            <Button variant="secondary" onClick={() => toast.info("CSV export functionality coming soon")}>
+<Button variant="secondary" onClick={() => toast.info("CSV export functionality coming soon")}>
               <ApperIcon name="Download" className="w-4 h-4 mr-2" />
               Export CSV
             </Button>
-            <Button variant="secondary" onClick={() => toast.info("PDF export functionality coming soon")}>
+<Button variant="secondary" onClick={() => toast.info("PDF export functionality coming soon")}>
               <ApperIcon name="FileText" className="w-4 h-4 mr-2" />
               Export PDF
             </Button>
